@@ -19,6 +19,7 @@ SkiScape is an application that calculates ski sizes based on user height, age a
 `npm install`
 - To render the front end execute \
 `npm start`
+- The Result obtained after hitting "Find!" is dummy data. The exact results can be obtained from the api call.
 
 ## Goals Achieved :
 - Built frontend and Backend
