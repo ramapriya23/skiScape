@@ -1,0 +1,32 @@
+.example-card {
+  max-width: 300px;
+  background-color: lightgrey;
+}
+
+.product{
+  padding-left: 50px;
+  text-align: center;
+}
+
+mat-card-subtitle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.image{
+  width:300px;
+  height: 300px;
+  background-size:100%;
+  background-position: 100%;
+}
+.img-1{
+  background-image: url("assets/Ski1.jpg");
+}
+
+.img-2{
+  background-image: url("assets/ski2.jpg");
+}
+
+.img-3{
+  background-image: url("assets/Ski3.jpg");
+}

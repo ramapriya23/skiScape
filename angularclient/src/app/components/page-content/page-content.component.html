@@ -1,0 +1,63 @@
+<div class="main-content">
+  <div class="some-space"></div>
+    <div class="content-card">
+      <mat-card class="content-form">
+        <mat-card-title>
+          <h1><strong>Welcome to Skiscape!</strong></h1>
+        </mat-card-title>
+        <mat-card-content>
+        <p>  Fill in your details below so we can find you the right sized ski for you:</p>
+          <div *ngIf="message" class="warn-message">
+            <fa-icon [icon]="warn"></fa-icon>&nbsp;&nbsp;{{message}}
+          </div>
+          <div class="row content-field" [formGroup]="userInfo">
+           <div class="field col-1">
+             <mat-form-field appearance="outline">
+               <mat-label>Height</mat-label>
+               <input matInput formControlName="height">
+               <mat-hint>Enter height in cm</mat-hint>
+               <mat-error>Enter Valid Height</mat-error>
+             </mat-form-field>
+           </div>
+            <div class="field col-1">
+              <mat-form-field appearance="outline" >
+                <mat-label>Age</mat-label>
+                <input matInput formControlName="age">
+                <mat-error>Enter Valid Age</mat-error>
+              </mat-form-field>
+            </div>
+
+           <div class="field col-1">
+             <mat-form-field appearance="outline" >
+               <mat-label>Ski type</mat-label>
+               <mat-select formControlName="type">
+                 <mat-option value="0">Classic</mat-option>
+                 <mat-option value="1">FreeStyle</mat-option>
+               </mat-select>
+             </mat-form-field>
+           </div>
+            <div class="field col-2">
+
+            </div>
+            <div class="col find-button">
+              <button mat-raised-button color="primary" (click)="findSkiSize()" [disabled]="!userInfo.valid">Find!</button>
+            </div>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  <div class="content-card" *ngIf="skiLengthResult">
+<mat-card>
+  <h1>
+    Ski Size recommended for you is {{skiLengthResult}}
+  </h1>
+
+   <div>Here are some suggestions if you would like to order skis online</div>
+    <div>
+      <app-ski-suggestions></app-ski-suggestions>
+    </div>
+
+</mat-card>
+    </div>
+</div>

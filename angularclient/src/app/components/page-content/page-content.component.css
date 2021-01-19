@@ -1,0 +1,46 @@
+.main-content {
+  text-indent: 50px;
+  height: 700px;
+}
+.some-space{
+  height: 50px;
+}
+.content-form{
+  height: 100%;
+}
+h1{
+  font-size: 30px;
+  font-style: normal;
+}
+
+p{
+  font-size: 20px;
+}
+
+.content-card{
+  padding-left: 200px;
+  padding-right:200px;
+  padding-bottom: 20px;
+}
+
+.warn-message{
+  color: darkorange;
+  padding-top: 15px;
+  font-size: 15px;
+
+}
+
+
+.find-button{
+  min-width: 100%;
+  float: right;
+  display: block;
+  size: 50px;
+}
+
+.field{
+  padding-right: 50px;
+  margin: 0 auto;
+  float: left;
+  display: inline-block;
+}
